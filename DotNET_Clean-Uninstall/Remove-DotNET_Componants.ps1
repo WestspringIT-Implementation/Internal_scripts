@@ -17,3 +17,9 @@ msiexec.exe /i $MSIPath /quiet /norestart
 
 # Clean up
 Remove-Item -Path $FilePath -Recurse -ErrorAction SilentlyContinue
+
+# Remove all donet componants
+dotnet-core-uninstall remove --all --aspnet-runtime  --force --yes
+dotnet-core-uninstall remove --all --hosting-bundle  --force --yes
+dotnet-core-uninstall remove --all --runtime  --force --yes
+dotnet-core-uninstall remove --all --sdk  --force --yes
