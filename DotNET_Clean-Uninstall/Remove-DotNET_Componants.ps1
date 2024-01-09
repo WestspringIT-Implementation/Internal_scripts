@@ -1,5 +1,5 @@
 # Initialise Vars
-$Uri = "https://github.com/WestspringIT-Implementation/Internal_scripts/raw/main/DotNET_Clean-Uninstall/dotnet-core-uninstall-1.6.0.msi"
+$Uri = "https://raw.githubusercontent.com/WestspringIT-Implementation/Internal_scripts/main/DotNET_Clean-Uninstall/dotnet-core-uninstall-1.6.0.msi"
 $FilePath =  "C:\IT\dotnet-core-uninstall\"
 $MSIName = "1.6.0.msi"
 $MSIPath = "$FilePath$MSIName"
