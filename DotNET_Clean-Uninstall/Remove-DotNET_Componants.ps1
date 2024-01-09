@@ -18,6 +18,9 @@ msiexec.exe /i $MSIPath /quiet /norestart
 # Clean up
 Remove-Item -Path $FilePath -Recurse -ErrorAction SilentlyContinue
 
+# Reload powershell window to make the dotnet-core-uninstall* commands availabel for use
+Invoke-Command { & "powershell.exe" } -NoNewScope
+
 # Remove all donet componants
 dotnet-core-uninstall remove --all --aspnet-runtime  --force --yes
 dotnet-core-uninstall remove --all --hosting-bundle  --force --yes
